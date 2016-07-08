@@ -1,0 +1,30 @@
+.imageSequence {
+  position: absolute;
+  top: 11.7vw;
+  left: 27.3%;
+  min-width: 10%;
+  max-width: 12%;
+  height: 78vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.imageSequence::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+.imageSequence::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(255,255,255,0.9);
+}
+
+.imageSequence img{
+  cursor: pointer;
+  max-width: 44%;
+  min-width: 10%;
+  background: rgba(0,0,0,.3);
+  padding: 6px 4px 15px 4px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border: 1px rgba(255,255,255,.3) solid;
+  border-top: 1px rgba(255,255,255,0.05) solid;
+}

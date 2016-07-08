@@ -1,0 +1,99 @@
+.cluster {
+}
+
+.unit{
+  position:absolute;
+
+}
+.unitContent{
+  width: 80px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 5px 5px 0px 5px;
+  border: 1px rgba(255,255,255,0.08) solid;
+  border-bottom: 1px rgba(255,255,255,0.05) solid;
+  transition: all .3s ease-in-out;
+  z-index: 90000;
+
+}
+.unitContent:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+  transform: scale(1.4);
+  z-index: 1000000;
+}
+
+.unitIMG {
+  opacity: 0.30;
+  width:100%;
+  border: 1px rgba(255,255,255,0.85) solid;
+  transition: all .3s ease-in-out;
+}
+
+.unitIMG:hover {
+  opacity: 0.85;
+}
+
+.unitTitle {
+  color: rgba(255,255,255,0.65);
+  display: block;
+  font-size: 8px;
+  line-height: 6px;
+  margin-top: 4px;
+}
+
+.unitDescription {
+  color: rgba(255,255,255,0.15);
+  margin-top: 3px;
+  line-height: 3px;
+  font-size: 4px;
+  font-weight: 200;
+}
+
+.unitDescription {
+  color: rgba(255,255,255,0.55);
+  margin-top: 3px;
+  line-height: 3px;
+  font-size: 4px;
+  font-weight: 200;
+}
+
+
+.unitEmotionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all .4s ease-in-out;
+  opacity: 0.15;
+  filter: blur(3px);
+}
+
+.unitEmotionList:hover {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+
+.unitEmotionList li {
+  color: rgba(255,255,255,0.8);
+  font-size: 8px;
+  font-weight: 200;
+}
+
+.unitEmotionList li:hover {
+}
+
+.anger, .contempt, .disgust, .fear, .happiness, .neutral, .sadness, .surprise {
+  color: rgba(255,255,255,1);
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.35);
+  margin-left: -15px;
+  padding: 0 2px 1px 2px;
+}
+
+.anger { background-color: rgba(255, 77, 9, 0.85);}
+.contempt { background-color: rgba(0, 255, 185, 0.85);}
+.disgust{ background-color: rgba(0, 255, 253, 0.85);}
+.fear {background-color: rgba(0, 156, 255, 0.85);}
+.happiness {background-color: rgba(255, 178, 0, 1);}
+.neutral {background-color: rgba(255, 255, 255, 0.95);}
+.sadness {background-color: rgba(130, 130, 130, 0.79);}
+.surprise {background-color: rgba(255, 0, 93, 0.79);}

@@ -1,0 +1,33 @@
+.video {
+  position: absolute;
+  top: 10px;
+  left: 27.5%;
+  background: rgba(0,0,0,.3);
+  padding: 6px 4px 15px 4px;
+  border: 1px rgba(255,255,255,.3) solid;
+  border-top: 1px rgba(255,255,255,0.05) solid;
+  min-width: 10%;
+  max-width: 12%;
+}
+
+.video video{
+  width: 100%;
+}
+
+.loading{
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  color: rgba(255,255,255,1);
+  font-size: 9px;
+  opacity: 1;
+}
+
+.caption{
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  color: rgba(255,255,255,.3);
+  font-size: 6px;
+  opacity: 1;
+}

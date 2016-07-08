@@ -1,0 +1,14 @@
+.abstract {
+  width: 8%;
+  position: absolute;
+  top: 70px;
+  left: 34px;
+  height: 80%;
+  overflow: hidden;
+}
+
+.abstract p{
+  font-size: 7px;
+  line-height: 8px;
+  color: rgba(255,255,255,0.25)
+}
