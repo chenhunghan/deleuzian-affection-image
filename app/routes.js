@@ -18,7 +18,7 @@ export default function createRoutes(store) {
 
   return [
     {
-      path: '/',
+      path: '/deleuzian-affection-image/',
       name: 'home',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
