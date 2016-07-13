@@ -1,4 +1,7 @@
 ## Visualize Deleuzian Affection-Image
+
+Hung-Han Chen <chenhungh@gmail.com>
+
 This is a proof of concept study visualizing Deleuzian philosophical concept. The project tried to visualize philosophical purposed by Gilles Deleuze in his (1983) book **Cinema 1: The Movement Image (Cinéma 1. L'Image-Mouvement)**
 
 [Direct Link to the Visualization]()
