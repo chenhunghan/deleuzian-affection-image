@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import Logo from '../../components/Logo'
+import Logo from 'components/Logo'
 import Footer from '../../components/Footer'
 import BackgroundVideo from '../../components/BackgroundVideo'
 import Shade from '../../components/Shade'
@@ -21,7 +21,7 @@ import ImageSequence from '../ImageSequence'
 import ClusterWrapper from '../../components/ClusterWrapper'
 import Cluster from '../Cluster'
 import Error from '../Error'
-import Loading from '../Loading'
+import Loading from 'containers/Loading'
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
