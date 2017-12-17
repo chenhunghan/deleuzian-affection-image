@@ -1,6 +1,7 @@
 import { take, call, put, select } from 'redux-saga/effects';
 import { takeEvery, takeLatest } from 'redux-saga'
 import request from 'utils/request';
+import { delay } from 'redux-saga'
 
 import {
   GET_EMOTION_SUCCEEDED,

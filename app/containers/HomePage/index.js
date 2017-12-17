@@ -22,28 +22,30 @@ import ClusterWrapper from '../../components/ClusterWrapper'
 import Cluster from '../Cluster'
 import Error from '../Error'
 import Loading from 'containers/Loading'
+import respondedResult from '../../media/respondedResult'
+
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (
       <div>
-        <BackgroundVideo />
+        {/* <BackgroundVideo /> */}
         <Shade>
-          <EntitiesList />
-          <Video />
-          <ImageSequence />
+          {/* <EntitiesList /> */}
+          {/* <Video />
+          <ImageSequence /> */}
           <div style={{
-              'width': '58.5%',
-              'height': '95.4%',
+              'width': '88.5%',
+              'height': '97%',
               'backgroundColor': 'rgba(255,255,255,0.02)',
               'border': '1px rgba(255,255,255,0.08) solid',
               'position': 'absolute',
-              'top': '20px',
-              'left': '40.3%'
+              'top': '10px',
+              'left': '10.5%'
             }}>
-            <Cluster />
+            <Cluster respondedResult={respondedResult} />
           </div>
-          <Abstract />
+          {/* <Abstract /> */}
           <Logo />
           <Footer />
         </Shade>

@@ -9,7 +9,6 @@ const selectLoadingDomain = () => createSelector(
 const selectLoading = () => createSelector(
   selectLoadingDomain(),
   (substate) => {
-    console.log(substate.toJS())
     return substate.toJS()
   }
 );

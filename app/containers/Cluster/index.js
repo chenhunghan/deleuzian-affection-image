@@ -19,6 +19,14 @@ function onlyUnique(value, index, self) {
   return imgURLs.indexOf(value.imgURL) === index;
 }
 
+const defaultOption = {
+  dim: 3,
+  perplexity: 5,
+  earlyExaggeration: 1.0,
+  learningRate: 100,
+  nIter: 400,
+  metric: 'euclidean'
+}
 
 export class Cluster extends React.Component { // eslint-disable-line react/prefer-stateless-function
   getCoordination(cluster) {
@@ -35,14 +43,8 @@ export class Cluster extends React.Component { // eslint-disable-line react/pref
         s.surprise
       ]
     })
-    let defaultOption = {
-      dim: 2,
-      perplexity: 5,
-      earlyExaggeration: 1.0,
-      learningRate: 100,
-      nIter: 400,
-      metric: 'euclidean'
-    }
+    console.log(cluster.length)
+    console.log(emotions.length)
     let model = new TSNE(defaultOption)
     model.init({
       data: emotions,
@@ -57,8 +59,9 @@ export class Cluster extends React.Component { // eslint-disable-line react/pref
     return entitiesCoordination
   }
   render() {
-    let cluster = this.props.cluster.filter(onlyUnique)
+    let cluster = this.props.respondedResult
     let entitiesCoordination = this.getCoordination(cluster)
+    console.log(entitiesCoordination)
     return (
       <div className={styles.cluster}>
         {this.clusterRender(cluster, entitiesCoordination)}
@@ -152,17 +155,16 @@ export class Cluster extends React.Component { // eslint-disable-line react/pref
     )
   }
   componentWillUpdate(nextProps) {
-    //console.log(nextProps)
   }
 }
 
-const mapStateToProps = selectCluster();
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
-}
+// const mapStateToProps = selectCluster();
+//
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     dispatch,
+//   };
+// }
 
 const reactDimensionsOptions = {
   getHeight: (element) => {
@@ -172,4 +174,4 @@ const reactDimensionsOptions = {
     return element.clientWidth*0.87
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Dimensions(reactDimensionsOptions)(Cluster));
+export default connect(null, null)(Dimensions(reactDimensionsOptions)(Cluster));

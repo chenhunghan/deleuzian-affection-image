@@ -18,7 +18,11 @@ export class ImageSequence extends React.Component { // eslint-disable-line reac
       <div className={styles.imageSequence}>
         {this.props.img.map((url)=> {
           return (
-            <img key={url} src={url} onClick={() => this.props.dispatch({type: GET_EMOTION_REQUESTED, payload: {'url': url, 'entity': this.props}})}/>
+            <img key={url} src={url}
+                 onClick={() => this.props.dispatch({
+                  type: GET_EMOTION_REQUESTED,
+                  payload: {'url': url, 'entity': this.props}}
+                 )}/>
           )
         })}
       </div>

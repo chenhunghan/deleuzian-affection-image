@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>vr</title>
+    <style>body { margin: 0; }</style>
+  <head>
+  <body>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="BattleshipPotemkin" class="video">
+      <source type="video/mp4"  src="../static_assets/BattleshipPotemkin/BattleshipPotemkin.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="BrokenBlossoms" class="video">
+      <source type="video/mp4"  src="../static_assets/BrokenBlossoms/BrokenBlossoms.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="EnochArden" class="video">
+      <source type="video/mp4"  src="../static_assets/EnochArden/EnochArden.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="FoolishWives" class="video">
+      <source type="video/mp4"  src="../static_assets/FoolishWives/FoolishWives.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="HeartsOfTheWorld" class="video">
+      <source type="video/mp4"  src="../static_assets/HeartsOfTheWorld/HeartsOfTheWorld.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="IvantheTerrible" class="video">
+      <source type="video/mp4"  src="../static_assets/IvantheTerrible/IvantheTerrible.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="OrphansOfTheStorm" class="video" >
+      <source type="video/mp4"  src="../static_assets/OrphansOfTheStorm/OrphansOfTheStorm.mov" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="PandorasBox" class="video">
+      <source type="video/mp4"  src="../static_assets/PandorasBox/PandorasBox.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="QueenKelly" class="video">
+      <source type="video/mp4"  src="../static_assets/QueenKelly/QueenKelly.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="TheBirthOfANation" class="video">
+      <source type="video/mp4"  src="../static_assets/TheBirthOfANation/TheBirthOfANation.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="TheGeneralLine" class="video">
+      <source type="video/mp4"  src="../static_assets/TheGeneralLine/TheGeneralLine.mp4" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="TheMurdererLivesAtNumber21" class="video">
+      <source type="video/mp4"  src="../static_assets/TheMurdererLivesAtNumber21/TheMurdererLivesAtNumber21.mov" />
+    </video>
+    <video muted autoplay loop webkit-playsinline style="display:none;" id="TheScarletEmpress" class="video">
+      <source type="video/mp4"  src="../static_assets/TheScarletEmpress/TheScarletEmpress.mp4" />
+    </video>
+    <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
+    <script src="./client.bundle?platform=vr"></script>
+    <script>
+      // Initialize the React VR application
+      ReactVR.init(
+        // When you're ready to deploy your app, update this line to point to
+        // your compiled index.bundle.js
+        '../index.vr.bundle?platform=vr&dev=true',
+        // Attach it to the body tag
+        document.body
+      );
+    </script>
+  </body>
+</html>

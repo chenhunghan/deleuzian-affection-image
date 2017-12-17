@@ -19,7 +19,13 @@ const selectEntitiesList = () => createSelector(
   (substate) => substate.toJS()
 );
 
+const selectCluster = () => createSelector(
+  selectEntitiesListDomain(),
+  (substate) => substate.toJS()
+);
+
 export default selectEntitiesList;
 export {
+  selectCluster,
   selectEntitiesListDomain,
 };

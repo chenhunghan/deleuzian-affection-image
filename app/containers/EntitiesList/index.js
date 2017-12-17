@@ -6,9 +6,12 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import selectEntitiesList from './selectors';
+import { selectEntitiesList, selectCluster } from './selectors';
 import styles from './styles.css';
 import {changeHighlightEntity} from './actions'
+import {GET_EMOTION_REQUESTED} from '../EntitiesList/constants'
+import flatten from 'lodash/flatten';
+import { createStructuredSelector } from 'reselect';
 
 export const entitiesListData = [
   {
@@ -201,41 +204,57 @@ export const entitiesListData = [
   }
 ];
 
+const imgUrlList = flatten(entitiesListData.map((film) => {
+  return film.img.map((url) => {
+    return {
+      url,
+      entity: film,
+    }
+  })
+}))
+
 export class EntitiesList extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className={styles.entitiesList}>
-        {entitiesListData.map((entity, key)=> {
-          return (
-            <div key={entity.title} className={styles.entityCard} onClick={(event) => this.props.changeHighlightEntity(entity)}>
-              <h1>{entity.title}</h1>
-              <p>{entity.description}</p>
-            </div>
-          )
-        })}
+      <div>
+
       </div>
+      // <div className={styles.entitiesList}>
+      //   {entitiesListData.map((entity, key)=> {
+      //     return (
+      //       <div key={entity.title} className={styles.entityCard} onClick={(event) => this.props.changeHighlightEntity(entity)}>
+      //         <h1>{entity.title}</h1>
+      //         <p>{entity.description}</p>
+      //       </div>
+      //     )
+      //   })}
+      // </div>
     );
   }
   componentWillMount() {
-    this.props.changeHighlightEntity(entitiesListData[Math.floor(Math.random() * entitiesListData.length)])
+    // this.props.changeHighlightEntity(entitiesListData[Math.floor(Math.random() * entitiesListData.length)])
+  }
+  componentDidMount() {
+    // console.log('start')
+    // const dispatch = this.props.dispatch;
+    // const that = this;
+    // for (let [index, value] of imgUrlList.entries()) {
+    //   setTimeout(function(){
+    //     dispatch({
+    //       type: GET_EMOTION_REQUESTED,
+    //       payload: {'url': value.url, 'entity': value.entity },
+    //     })
+    //     if (index === imgUrlList.length - 1) {
+    //       console.log('done')
+    //       console.log(that.props.cluster)
+    //     }
+    //   }, 3000 * index)
+    // }
   }
 }
 
-const mapStateToProps = selectEntitiesList();
+const mapStateToProps = createStructuredSelector({
+  cluster: selectCluster(),
+});
 
-//function mapDispatchToProps(dispatch) {
-//  return {
-//    onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-//    changeRoute: (url) => dispatch(push(url)),
-//    dispatch,
-//  };
-//}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    changeHighlightEntity: (entity) => dispatch(changeHighlightEntity(entity)),
-    dispatch,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(EntitiesList);
+export default connect(mapStateToProps, null)(EntitiesList);
